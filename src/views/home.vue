@@ -3,7 +3,6 @@
     <a name="home"></a>
     <app-header />
     <home-page />
-    <a name="about"></a>
     <about-page />
     <proj-page />
     <contact />

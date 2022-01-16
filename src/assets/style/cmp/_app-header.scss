@@ -3,12 +3,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 5%;
+  height: 8%;
   width: 100%;
   padding: 0 40px;
   background-color: #b1a28e38;
   box-shadow: none;
   transition: all 0.3s ease 0s;
+  &.scroll {
+    background-color: #ddcece;
+    z-index: 1;
+  }
   .logo {
     img {
       width: 30px;

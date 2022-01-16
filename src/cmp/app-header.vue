@@ -1,5 +1,5 @@
 <template>
-  <header class="app-header">
+  <header class="app-header" :class="{ scroll: userHasScrolled }">
     <a class="logo" href="#home"><img src="../assets/img/A.png" alt="" /></a>
     <img class="icon" src="../assets/img/svg/bar.svg" alt="" />
     <div class="links">
@@ -14,6 +14,17 @@
 <script>
   export default {
     name: 'app-header',
+    data() {
+      return {
+        userHasScrolled: false,
+      };
+    },
+    created() {
+      addEventListener('scroll', () => {
+        if (!window.scrollY) this.userHasScrolled = false;
+        else this.userHasScrolled = true;
+      });
+    },
   };
 </script>
 

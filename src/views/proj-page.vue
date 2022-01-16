@@ -70,7 +70,7 @@
             mainTechnology: 'Vanilla JavaScript',
             style: 'CSS3',
             otherTechnologies: 'Canvas, Local Storage',
-            img: require('../assets/img/Meme-Generator.png'),
+            img: require('../assets/img/memeGenerator.png'),
             projLink: 'https://avielcohanian.github.io/Meme-Generator/',
             code: 'https://github.com/avielCohanian/Meme-Generator',
           },
@@ -88,6 +88,10 @@
         ],
       };
     },
+
+    //  watch(){
+    // ''
+    //  },
     methods: {
       open(url) {
         window.open(url);
