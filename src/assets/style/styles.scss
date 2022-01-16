@@ -1,0 +1,26 @@
+// SETUP
+@import './setup/functions';
+@import './setup/variables';
+@import './setup/mixins';
+@import './setup/typography';
+
+// BASICS
+@import './basics/helpers';
+@import './basics/base';
+@import './basics/animations';
+@import './basics/layout';
+@import './basics/modals';
+
+// COMPONENTS
+@import './cmp/home';
+@import './cmp/app-header';
+@import './cmp/contact';
+
+// PAGES
+@import './pages/home-page';
+@import './pages/about-page';
+@import './pages/proj-page';
+
+.app {
+  background-image: url('../img/bcg.jpg');
+}

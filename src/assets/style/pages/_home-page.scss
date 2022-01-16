@@ -1,0 +1,53 @@
+.home-page {
+  display: flex;
+  align-items: center;
+  padding-bottom: 7rem;
+  position: relative;
+  margin-top: 10%;
+  min-height: 100vh;
+
+  div {
+    h3 {
+      margin-top: 40px;
+      margin-bottom: 40px;
+      margin-left: 5px;
+      font-family: NotoSerifRegular;
+    }
+    a {
+      cursor: pointer;
+      font-size: 0.875em;
+      letter-spacing: 3px;
+      padding: 12px 20px;
+      background: linear-gradient(270deg, #f06449, #ef3636);
+      color: #fff;
+      border-radius: 2px;
+      transition: all 0.3s;
+      position: relative;
+
+      span {
+        position: absolute;
+        top: 15px;
+        right: -15px;
+        font-size: 25px;
+        color: #000000de;
+        transition: 0.4s all;
+      }
+      &:hover {
+        outline-width: 0;
+        span {
+          right: -35px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $break-narrow) {
+  .home-page {
+    div {
+      h1 {
+        line-height: 65px;
+      }
+    }
+  }
+}

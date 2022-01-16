@@ -1,0 +1,36 @@
+.app-header {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5%;
+  width: 100%;
+  padding: 0 40px;
+  background-color: #b1a28e38;
+  box-shadow: none;
+  transition: all 0.3s ease 0s;
+  .logo {
+    img {
+      width: 30px;
+    }
+  }
+  .icon {
+    width: 30px;
+    display: none;
+  }
+  .links {
+    & > * {
+      padding-left: 25px;
+    }
+  }
+}
+
+@media screen and (max-width: $break-narrow) {
+  .app-header {
+    padding: 0 15px 0 0;
+    height: 8%;
+    .logo {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,20 @@
+.contact-me {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 85px;
+  background-color: #00800045;
+  padding: 20px;
+  h2 {
+    margin-bottom: 35px;
+  }
+
+  .links {
+    & .link {
+      width: 30px;
+      height: 30px;
+      margin: 0 10px;
+      cursor: pointer;
+    }
+  }
+}
