@@ -17,6 +17,7 @@
           Check Out my latest projects - all code is available on my <a class="pointer" @click="open"> Github</a> for
           code review.
         </p>
+
         <div class="icon-container">
           <img src="../assets/img/svg/vue.svg" alt="" />
           <img src="../assets/img/svg/angular.svg" alt="" />
