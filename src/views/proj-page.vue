@@ -60,7 +60,7 @@
             otherTechnologies: 'Local Storage',
             img: require('../assets/img/trelix.png'),
             projLink: '',
-            code: 'https://github.com/avielCohanian/Trelix',
+            code: 'https://github.com/avielCohanian/-Appsus',
           },
           {
             title: 'Meme Generator',
@@ -88,10 +88,6 @@
         ],
       };
     },
-
-    //  watch(){
-    // ''
-    //  },
     methods: {
       open(url) {
         window.open(url);
