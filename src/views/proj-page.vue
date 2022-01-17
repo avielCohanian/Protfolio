@@ -58,8 +58,8 @@
             mainTechnology: ' Vue.js',
             style: 'Vue router, Font Awesome (Icons)',
             otherTechnologies: 'Local Storage',
-            img: require('../assets/img/trelix.png'),
-            projLink: '',
+            img: require('../assets/img/appsus.png'),
+            projLink: 'https://appsus.netlify.app/#/',
             code: 'https://github.com/avielCohanian/-Appsus',
           },
           {
