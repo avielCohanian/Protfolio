@@ -1,6 +1,6 @@
 <template>
   <section class="proj-page">
-    <a name="seeMore"></a>
+    <a class="see-more" name="seeMore"></a>
     <ul class="clean-list">
       <li v-for="(proj, idx) in projects" :key="idx">
         <article>

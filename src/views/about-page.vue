@@ -31,6 +31,10 @@
           <img src="../assets/img/svg/html5.svg" alt="" />
           <img src="../assets/img/svg/github12.svg" alt="" />
         </div>
+        <a class="resume" href="/resume/Resume.pdf" download="Aviel-resume.pdf"
+          >CV
+          <img src="../assets/img/cv.png" alt="" />
+        </a>
       </div>
     </div>
   </section>
