@@ -15,10 +15,7 @@
           Hard worker, passionate about solving challenges, focusing on problem solving and detailed orientation,
           self-learner, team player with strong communication skills.
         </p>
-        <p>
-          Check Out my latest projects - all code is available on my <a class="pointer" @click="open"> Github</a> for
-          code review.
-        </p>
+        <p>Check Out my latest projects - all code is available on my <a class="pointer" @click="open"> Github</a>.</p>
 
         <div class="icon-container">
           <img src="../assets/img/svg/vue.svg" alt="" />
