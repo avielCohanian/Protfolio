@@ -59,7 +59,7 @@
             style: 'Vue router, Font Awesome (Icons)',
             otherTechnologies: 'Local Storage',
             img: require('../assets/img/appsus.png'),
-            projLink: 'https://appsus.netlify.app/#/',
+            projLink: 'https://appsus.netlify.app/#/keep',
             code: 'https://github.com/avielCohanian/-Appsus',
           },
           {

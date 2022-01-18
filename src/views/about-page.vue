@@ -2,10 +2,11 @@
   <section class="about-page full">
     <a name="about"></a>
 
-    <h3>ABOUT ME</h3>
     <div class="container">
       <img src="../assets/img/Aviel.jpg" alt="" />
       <div>
+        <h3>ABOUT ME</h3>
+
         <p>
           Hello, my name is Aviel Cohanian. I'm a Full Stack Web Developer, with experience in writing
           single-page-applications using the latest WEB technologies such as JavaScript (ES6, ES5), Vue.js, Angular,
@@ -28,10 +29,10 @@
           <img src="../assets/img/svg/html5.svg" alt="" />
           <img src="../assets/img/svg/github12.svg" alt="" />
         </div>
-        <a class="resume" href="/resume/Resume.pdf" download="Aviel-resume.pdf"
-          >CV
-          <img src="../assets/img/cv.png" alt="" />
-        </a>
+        <div class="resume">
+          <a href="/resume/Resume.pdf" download="Aviel-resume.pdf">CV </a>
+          <a @click="open">gh-pages</a>
+        </div>
       </div>
     </div>
   </section>
