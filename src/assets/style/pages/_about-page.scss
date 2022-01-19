@@ -16,8 +16,12 @@
     align-items: center;
     justify-content: space-evenly;
     a {
-      text-decoration: underline;
-      color: #1562c8e0;
+      text-decoration: none;
+      color: #504a4a;
+      &:hover {
+        color: inherit;
+        text-decoration: underline;
+      }
     }
     img {
       border-radius: 3%;

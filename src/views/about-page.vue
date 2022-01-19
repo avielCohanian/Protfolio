@@ -16,7 +16,7 @@
           Hard worker, passionate about solving challenges, focusing on problem solving and detailed orientation,
           self-learner, team player with strong communication skills.
         </p>
-        <p>Check Out my latest projects - all code is available on my <a class="pointer" @click="open"> Github</a>.</p>
+        <p>Check Out my latest projects - all code is available on my <a class="pointer" @click="open">GH</a>.</p>
 
         <div class="icon-container">
           <img src="../assets/img/svg/vue.svg" alt="" />
@@ -31,7 +31,7 @@
         </div>
         <div class="resume">
           <a href="/resume/Resume.pdf" download="Aviel-resume.pdf">CV </a>
-          <a @click="open">gh-pages</a>
+          <a @click="open">Github</a>
         </div>
       </div>
     </div>

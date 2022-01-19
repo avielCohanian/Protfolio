@@ -38,7 +38,7 @@
           {
             title: 'Workflow',
             description:
-              'Trello-based task management system. The system uses the Kanban-style method and is suitable for personal, group and organizational task management. Allows a variety of options for the user',
+              'Trello-based task management system. The system uses the Kanban-style method and is suitable for personal, group and organizational task management. Allows a variety of options for the user.',
             mainTechnology: 'Vue.js (with Vue CLI)',
             stateManagement: 'Vuex',
             serverSide: 'Node.js',
@@ -54,7 +54,7 @@
           {
             title: 'Mister Keep',
             description:
-              'Google-Keep-Based application, that allows users to make different kinds of notes, including text, lists, images, video and audio (via Youtube link), and also map locations. The notes are saved automatically in the Local Storage',
+              'Google-Keep-Based application, that allows users to make different kinds of notes, including text, lists, images, video and audio (via Youtube link), and also map locations. The notes are saved automatically in the Local Storage.',
             mainTechnology: ' Vue.js',
             style: 'Vue router, Font Awesome (Icons)',
             otherTechnologies: 'Local Storage',
@@ -65,7 +65,7 @@
           {
             title: 'Meme Generator',
             description:
-              'With Meme Generator you can create the funniest memes and share them with your friends on Facebook, Download to your computer, or save on the website (via Local Storage). You can use in our photo gallery, or upload your own image. Other features include adding text, stickers, choosing fonts and colors',
+              'With Meme Generator you can create the funniest memes and share them with your friends on Facebook, Download to your computer, or save on the website (via Local Storage). You can use in our photo gallery, or upload your own image. Other features include adding text, stickers, choosing fonts and colors.',
             mainTechnology: 'Vanilla JavaScript',
             mainTechnology: 'Vanilla JavaScript',
             style: 'CSS3',
@@ -77,7 +77,7 @@
           {
             title: 'Minesweeper',
             description:
-              'The classic Minesweeper board game in a new version with new features (hints, safe-clicks, lives and "undo" option)',
+              'The classic Minesweeper board game in a new version with new features (hints, safe-clicks, lives and "undo" option).',
             mainTechnology: 'Vanilla JavaScript',
             style: 'CSS3',
             otherTechnologies: 'Local Storage',
