@@ -36,7 +36,7 @@
       return {
         projects: [
           {
-            title: 'Workflow',
+            title: 'Trelix',
             description:
               'Trello-based task management system. The system uses the Kanban-style method and is suitable for personal, group and organizational task management. Allows a variety of options for the user.',
             mainTechnology: 'Vue.js (with Vue CLI)',
