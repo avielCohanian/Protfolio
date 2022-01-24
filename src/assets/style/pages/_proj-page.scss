@@ -63,18 +63,27 @@
 @media screen and (max-width: $break-narrow) {
   .proj-page {
     li {
-      flex-direction: column;
+      flex-direction: column-reverse;
       img {
         width: 100%;
+        margin-bottom: 20px;
+      }
+      article {
+        margin-bottom: 0;
       }
       .btn-container {
         .view-btn {
           &:hover {
-            background-color: #a1eacd;
-            padding: 0.9rem 1rem;
-            color: #000000de;
+            padding: 0.9rem 0.7rem !important;
+            background-color: #a1eacd !important;
+            color: black !important;
+            margin-bottom: 7px;
+            position: relative;
+            display: inline-block;
+            border: none;
+            margin-right: 5px;
             .hidden {
-              display: none;
+              display: none !important;
             }
           }
         }

@@ -14,17 +14,7 @@
 <script>
   export default {
     name: 'app-header',
-    data() {
-      return {
-        userHasScrolled: false,
-      };
-    },
-    created() {
-      addEventListener('scroll', () => {
-        if (!window.scrollY) this.userHasScrolled = false;
-        else this.userHasScrolled = true;
-      });
-    },
+    props: ['userHasScrolled'],
   };
 </script>
 

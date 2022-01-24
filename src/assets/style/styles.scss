@@ -24,3 +24,9 @@
 .app {
   background-image: url('../img/bcg.jpg');
 }
+
+@media screen and (max-width: $break-narrow) {
+  .app {
+    background-image: url('../img/bcgPhoneImg.jpg');
+  }
+}

@@ -1,12 +1,13 @@
 <template>
-  <section class="main-layout">
+  <section class="main-layout home">
     <a name="home"></a>
-    <app-header />
+    <app-header :userHasScrolled="userHasScrolled" />
     <home-page />
     <about-page />
     <proj-page />
     <contact />
     <a name="contact"></a>
+    <a v-if="userHasScrolled" href="#home" class="up-button"> </a>
   </section>
 </template>
 
@@ -18,6 +19,17 @@
   import ProjPage from './proj-page.vue';
   export default {
     name: 'home',
+    data() {
+      return {
+        userHasScrolled: false,
+      };
+    },
+    created() {
+      addEventListener('scroll', () => {
+        if (!window.scrollY) this.userHasScrolled = false;
+        else this.userHasScrolled = true;
+      });
+    },
     components: { AppHeader, HomePage, ProjPage, AboutPage, Contact },
   };
 </script>
