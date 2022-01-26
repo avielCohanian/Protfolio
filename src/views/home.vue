@@ -4,10 +4,11 @@
     <app-header :userHasScrolled="userHasScrolled" />
     <home-page />
     <about-page />
+    <a class="see-more" name="seeMore"></a>
     <proj-page />
     <contact />
     <a name="contact"></a>
-    <a v-if="userHasScrolled" href="#home" class="up-button"> </a>
+    <a v-if="userHasScrolled" href="#home" class="up-button"> <i class="fas fa-arrow-up"></i></a>
   </section>
 </template>
 

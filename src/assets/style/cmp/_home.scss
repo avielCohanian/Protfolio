@@ -11,6 +11,11 @@
     align-items: center;
     justify-content: center;
     color: #fff;
+    font-size: 25px;
+    &:hover {
+      background-color: #ab6c6c;
+      color: black;
+    }
   }
 }
 

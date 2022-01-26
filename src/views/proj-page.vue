@@ -1,35 +1,54 @@
 <template>
   <section class="proj-page">
-    <a class="see-more" name="seeMore"></a>
-    <ul class="clean-list">
-      <li v-for="(proj, idx) in projects" :key="idx">
-        <article>
-          <h2>{{ proj.title }}</h2>
-          <p>{{ proj.description }}</p>
-          <p v-if="proj.mainTechnology"><b>Main Technology:</b> {{ proj.mainTechnology }}</p>
-          <p v-if="proj.stateManagement"><b>State Management:</b> {{ proj.stateManagement }}</p>
-          <p v-if="proj.serverSide"><b>Server Side:</b> {{ proj.serverSide }}</p>
-          <p v-if="proj.database"><b>Database:</b> {{ proj.database }}</p>
-          <p v-if="proj.style"><b>Style:</b> {{ proj.style }}</p>
-          <p v-if="proj.libraries"><b>Libraries:</b> {{ proj.libraries }}</p>
-          <p v-if="proj.otherTechnologies"><b>Other Technologies:</b> {{ proj.otherTechnologies }}</p>
-          <div class="btn-container">
-            <a class="view-btn pointer" v-if="proj.projLink" @click="open(proj.projLink)">
-              <a> View It Here</a> <span class="hidden"></span>
-            </a>
-            <a class="view-btn pointer" v-if="proj.code" @click="open(proj.code)">
-              <a>View Github Repo</a> <span class="hidden"></span>
-            </a>
-          </div>
-        </article>
+    <ul class="clean-list" @keydown="checkSlide($event)">
+      <div class="select-btn btn-filter">
+        <a class="simple-button" @click="select('vanilla')"
+          ><span class="none"> Vanilla</span> <i class="fab fa-js-square"></i
+        ></a>
+        <a class="simple-button" @click="select('vue')"><span class="none">Vue </span><i class="fab fa-vuejs"></i></a>
+        <a class="simple-button" @click="select('react')"
+          ><span class="none">React </span><i class="fab fa-react"></i
+        ></a>
+        <!-- <a class="simple-button" @click="select('angular')"
+          ><span class="none">Angular </span><i class="fab fa-angular"></i
+        ></a> -->
+      </div>
+      <li v-if="projectsToDisplay && projectsToDisplay.length">
+        <proj-preview v-for="(proj, idx) in projectsToDisplay" :key="idx + proj.title" :idx="idx" :page="page">
+          <article>
+            <h2>{{ proj.title }}</h2>
+            <p>{{ proj.description }}</p>
+            <p v-if="proj.mainTechnology"><b>Main Technology:</b> {{ proj.mainTechnology }}</p>
+            <p v-if="proj.stateManagement"><b>State Management:</b> {{ proj.stateManagement }}</p>
+            <p v-if="proj.serverSide"><b>Server Side:</b> {{ proj.serverSide }}</p>
+            <p v-if="proj.database"><b>Database:</b> {{ proj.database }}</p>
+            <p v-if="proj.style"><b>Style:</b> {{ proj.style }}</p>
+            <p v-if="proj.libraries"><b>Libraries:</b> {{ proj.libraries }}</p>
+            <p v-if="proj.otherTechnologies"><b>Other Technologies:</b> {{ proj.otherTechnologies }}</p>
+            <div class="btn-container">
+              <a class="view-btn pointer" v-if="proj.projLink" @click="open(proj.projLink)">
+                <a> View It Here</a> <span class="hidden"></span>
+              </a>
+              <a class="view-btn pointer" v-if="proj.code" @click="open(proj.code)">
+                <a>View Github Repo</a> <span class="hidden"></span>
+              </a>
+            </div>
+          </article>
 
-        <img :src="proj.img" alt="" />
+          <img :src="proj.img" alt="" />
+        </proj-preview>
+        <template v-if="projectsToDisplay.length > 1">
+          <i @click="prev" class="fas fa-chevron-left btn"></i>
+          <i @click="next" class="fas fa-chevron-right btn"></i>
+        </template>
       </li>
+      <div class="no-proj" v-else>no-proj-yet</div>
     </ul>
   </section>
 </template>
 
 <script>
+  import ProjPreview from '../cmp/proj-preview.vue';
   export default {
     name: 'proj-page',
     data() {
@@ -85,14 +104,75 @@
             projLink: 'https://avielcohanian.github.io/MineSweeper/',
             code: 'https://github.com/avielCohanian/MineSweeper',
           },
+          {
+            title: 'Mister-BITcoin(in progress)',
+            description: ' A digital wallet for holding my bitcoins and sending (paying) them to my contact.',
+            mainTechnology: 'React',
+            stateManagement: 'Redux',
+            serverSide: 'Firebase',
+            database: 'Firebase',
+            style: 'SCSS',
+            libraries: 'Axios (http requests),Redux, Firebase,Chart.js, Material-ui',
+            otherTechnologies: 'Firebase authentication',
+            img: require('../assets/img/mister-bitcoin.png'),
+            projLink: 'https://avielcohanian.github.io/Mister-BITcoin-React/',
+            code: 'https://github.com/avielCohanian/Mister-BITcoin-React',
+          },
         ],
+        page: 0,
+        filter: '',
+        slideDirection: '',
       };
     },
     methods: {
       open(url) {
         window.open(url);
       },
+      next() {
+        this.page++;
+        if (this.page >= this.projsLength) {
+          this.page = 0;
+        }
+        this.slideDirection = 'slide-right';
+      },
+      prev() {
+        this.page--;
+        if (this.page < 0) {
+          this.page = this.projsLength - 1;
+        }
+        this.slideDirection = 'slide-left';
+      },
+      checkSlide(event) {
+        if (event.keyCode === 39) {
+          this.next();
+        } else if (event.keyCode === 37) {
+          this.prev();
+        } else {
+          return;
+        }
+      },
+      select(filter) {
+        this.filter = filter;
+      },
     },
+    computed: {
+      projsLength() {
+        return this.projectsToDisplay.length;
+      },
+      projectsToDisplay() {
+        let projsToDisplay = this.projects.slice();
+        console.log(this.filter);
+        if (!this.filter) return projsToDisplay;
+        else {
+          projsToDisplay = projsToDisplay.filter((p) =>
+            p.mainTechnology.toLowerCase().includes(this.filter.toLowerCase())
+          );
+        }
+        console.log(projsToDisplay);
+        return projsToDisplay;
+      },
+    },
+    components: { ProjPreview },
   };
 </script>
 

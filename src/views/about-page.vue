@@ -19,15 +19,15 @@
         <p>Check Out my latest projects - all code is available on my <a class="pointer" @click="open">Github</a>.</p>
 
         <div class="icon-container">
-          <img src="../assets/img/svg/vue.svg" alt="" />
-          <img src="../assets/img/svg/angular.svg" alt="" />
-          <img src="../assets/img/svg/react.svg" alt="" />
-          <img src="../assets/img/svg/node-js.svg" alt="" />
-          <img src="../assets/img/svg/js.svg" alt="" />
-          <img src="../assets/img/svg/sass.svg" alt="" />
-          <img src="../assets/img/svg/css3.svg" alt="" />
-          <img src="../assets/img/svg/html5.svg" alt="" />
-          <img src="../assets/img/svg/github12.svg" alt="" />
+          <i class="fab fa-vuejs icon"></i>
+          <i class="fab fa-angular"></i>
+          <i class="fab fa-react"></i>
+          <i class="fab fa-node-js"></i>
+          <i class="fab fa-js-square"></i>
+          <i class="fab fa-sass"></i>
+          <i class="fab fa-css3-alt"></i>
+          <i class="fab fa-html5"></i>
+          <i class="fab fa-github"></i>
         </div>
         <div class="resume">
           <a href="/resume/Resume.pdf" download="Aviel-resume.pdf">CV </a>
