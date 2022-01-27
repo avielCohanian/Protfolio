@@ -2,16 +2,25 @@
   <section class="proj-page">
     <ul class="clean-list" @keydown="checkSlide($event)">
       <div class="select-btn btn-filter">
-        <a class="simple-button" @click="select('vanilla')"
-          ><span class="none"> Vanilla</span> <i class="fab fa-js-square"></i
-        ></a>
-        <a class="simple-button" @click="select('vue')"><span class="none">Vue </span><i class="fab fa-vuejs"></i></a>
-        <a class="simple-button" @click="select('react')"
-          ><span class="none">React </span><i class="fab fa-react"></i
-        ></a>
-        <!-- <a class="simple-button" @click="select('angular')"
-          ><span class="none">Angular </span><i class="fab fa-angular"></i
-        ></a> -->
+        <a :class="isActive('vanilla')" @click="select('vanilla')"
+          ><span class="none"> Vanilla</span> <i class="fab fa-js-square"></i>
+          <img src="../assets/img/js.png" alt="" />
+        </a>
+
+        <a :class="isActive('vue')" class="vue" @click="select('vue')">
+          <span class="none">Vue </span>
+          <i class="fab fa-vuejs"></i>
+          <img src="../assets/img/vue.png" alt="" />
+        </a>
+        <a :class="isActive('react')" @click="select('react')">
+          <span class="none">React </span>
+          <i class="fab fa-react"></i>
+          <img src="../assets/img/react.png" alt="" />
+        </a>
+        <!-- <a :class="isActive('angular')" @click="select('angular')"
+          ><span class="none">Angular </span><i class="fab fa-angular"></i>
+          <img src="../assets/img/angular.png" alt="" />
+        </a> -->
       </div>
       <li v-if="projectsToDisplay && projectsToDisplay.length">
         <proj-preview v-for="(proj, idx) in projectsToDisplay" :key="idx + proj.title" :idx="idx" :page="page">
@@ -34,7 +43,6 @@
               </a>
             </div>
           </article>
-
           <img :src="proj.img" alt="" />
         </proj-preview>
         <template v-if="projectsToDisplay.length > 1">
@@ -153,6 +161,10 @@
       },
       select(filter) {
         this.filter = filter;
+      },
+      isActive(type) {
+        if (this.filter !== type) return 'simple-button';
+        else return 'active';
       },
     },
     computed: {

@@ -20,10 +20,12 @@
 
         <div class="icon-container">
           <i class="fab fa-vuejs icon"></i>
-          <i class="fab fa-angular"></i>
           <i class="fab fa-react"></i>
+          <i class="fab fa-angular"></i>
           <i class="fab fa-node-js"></i>
           <i class="fab fa-js-square"></i>
+          <img src="../assets/img/svg/firebase.svg" alt="" />
+          <i class="fab fa-npm"></i>
           <i class="fab fa-sass"></i>
           <i class="fab fa-css3-alt"></i>
           <i class="fab fa-html5"></i>

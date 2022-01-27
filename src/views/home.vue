@@ -9,6 +9,7 @@
     <contact />
     <a name="contact"></a>
     <a v-if="userHasScrolled" href="#home" class="up-button"> <i class="fas fa-arrow-up"></i></a>
+    <span class="mouse-over" :style="{ left: pos.x + 'px', top: pos.y + 'px' }"></span>
   </section>
 </template>
 
@@ -23,12 +24,17 @@
     data() {
       return {
         userHasScrolled: false,
+        pos: { x: 0, y: 0 },
       };
     },
     created() {
       addEventListener('scroll', () => {
         if (!window.scrollY) this.userHasScrolled = false;
         else this.userHasScrolled = true;
+      });
+      addEventListener('mousemove', (e) => {
+        this.pos.x = e.pageX - 150;
+        this.pos.y = e.pageY - 25;
       });
     },
     components: { AppHeader, HomePage, ProjPage, AboutPage, Contact },

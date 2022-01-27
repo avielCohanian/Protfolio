@@ -5,11 +5,12 @@
   justify-content: center;
   align-items: center;
   box-shadow: -4px 4px 6px 5px #8888889e;
-  padding: 10px;
-  min-height: 380px;
+  padding: 0 10px;
+  min-height: 400px;
   gap: 10px;
   border-radius: 7px;
-  animation: fadein 1.5s ease-in-out;
+  animation: in 0.5s ease-in-out forwards;
+
   transform-style: preserve-3d;
   article {
     margin-bottom: 20px;
@@ -105,5 +106,15 @@
         }
       }
     }
+  }
+}
+
+@keyframes in {
+  0% {
+    transform: scale(0.6);
+  }
+
+  100% {
+    transform: scale(1);
   }
 }

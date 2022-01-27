@@ -1,0 +1,19 @@
+.home {
+  position: relative;
+  z-index: 1;
+  .mouse-over {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background: linear-gradient(90deg, #334bf599 0%, #2ae9c99c 100%);
+    filter: blur(10px);
+    border-radius: 50%;
+    z-index: -1;
+  }
+}
+
+@media screen and (max-width: $break-narrow) {
+  .mouse-over {
+    display: none;
+  }
+}
