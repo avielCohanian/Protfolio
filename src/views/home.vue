@@ -9,7 +9,7 @@
     <contact />
     <a name="contact"></a>
     <a v-if="userHasScrolled" href="#home" class="up-button"> <i class="fas fa-arrow-up"></i></a>
-    <span class="mouse-over" :style="{ left: pos.x + 'px', top: pos.y + 'px' }"></span>
+    <!-- <span class="mouse-over" :style="{ left: pos.x + 'px', top: pos.y + 'px' }"></span> -->
   </section>
 </template>
 
@@ -33,7 +33,7 @@
         else this.userHasScrolled = true;
       });
       addEventListener('mousemove', (e) => {
-        this.pos.x = e.pageX - 150;
+        this.pos.x = e.clientX - 250;
         this.pos.y = e.pageY - 25;
       });
     },

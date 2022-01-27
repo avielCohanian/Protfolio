@@ -160,7 +160,8 @@
         }
       },
       select(filter) {
-        this.filter = filter;
+        this.filter = this.filter === filter ? '' : filter;
+        this.page = 0;
       },
       isActive(type) {
         if (this.filter !== type) return 'simple-button';
@@ -180,7 +181,6 @@
             p.mainTechnology.toLowerCase().includes(this.filter.toLowerCase())
           );
         }
-        console.log(projsToDisplay);
         return projsToDisplay;
       },
     },
