@@ -3,6 +3,8 @@
     <a name="home"></a>
     <app-header :userHasScrolled="userHasScrolled" />
     <home-page />
+    <a class="about" name="about"></a>
+
     <about-page />
     <a class="see-more" name="seeMore"></a>
     <proj-page />

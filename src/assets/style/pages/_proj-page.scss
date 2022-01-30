@@ -84,10 +84,11 @@
   }
   .proj-idx {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     align-content: center;
-    gap: 35px;
+    gap: 25px;
     & > * {
       padding: 4px 15px;
       border-radius: 3em;

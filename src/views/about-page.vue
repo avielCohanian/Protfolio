@@ -1,7 +1,5 @@
 <template>
   <section class="about-page full">
-    <a name="about"></a>
-
     <div class="container">
       <img src="../assets/img/Aviel.jpg" alt="" />
       <div>
