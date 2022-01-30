@@ -50,7 +50,15 @@
           <i @click="next" class="fas fa-chevron-right btn"></i>
         </template>
       </li>
-      <div class="no-proj" v-else>no-proj-yet</div>
+      <div class="proj-idx">
+        <span
+          v-for="n in projectsToDisplay.length"
+          :key="n"
+          :style="{ 'background-color': n - 1 === page ? '#ff00005c' : '#9e9e9e6b' }"
+          @click="page = n - 1"
+          :title="projectsToDisplay[n - 1].title"
+        ></span>
+      </div>
     </ul>
   </section>
 </template>

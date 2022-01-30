@@ -76,10 +76,23 @@
       }
     }
     .fa-chevron-right {
-      right: -34px;
+      right: -44px;
     }
     .fa-chevron-left {
-      left: -34px;
+      left: -44px;
+    }
+  }
+  .proj-idx {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    gap: 35px;
+    & > * {
+      padding: 4px 15px;
+      border-radius: 3em;
+      border: 1px solid #00000085;
+      cursor: pointer;
     }
   }
 }
