@@ -33,8 +33,8 @@
         else this.userHasScrolled = true;
       });
       addEventListener('mousemove', (e) => {
-        this.pos.x = e.clientX - 250;
-        this.pos.y = e.pageY - 25;
+        this.pos.x = e.pageX;
+        this.pos.y = e.pageY;
       });
     },
     components: { AppHeader, HomePage, ProjPage, AboutPage, Contact },

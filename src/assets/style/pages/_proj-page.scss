@@ -26,10 +26,13 @@
         align-content: center;
         gap: 10px;
       }
-      i,
-      img {
+      i {
         margin-top: 4px;
         width: 20px;
+      }
+      img {
+        margin-top: 0;
+        width: 22px;
       }
 
       a {
