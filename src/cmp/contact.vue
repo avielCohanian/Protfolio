@@ -2,7 +2,9 @@
   <div class="contact-me full">
     <h2>CONTACT ME</h2>
     <p><b>Tel:</b> 050-3431443</p>
-    <p><b>Mail:</b> avial151515@gmail.com</p>
+    <p class="email-link" @click="open('https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=avielcohanian@gmail.com')">
+      <b>Mail:</b> avielcohanian@gmail.com
+    </p>
     <div class="links">
       <i class="fab fa-linkedin link" @click="open('https://www.linkedin.com/in/aviel-cohanian/')"></i>
       <i class="fab fa-github-square link" @click="open('https://github.com/avielCohanian')"></i>

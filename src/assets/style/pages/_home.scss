@@ -5,7 +5,10 @@
     position: absolute;
     height: 50px;
     width: 50px;
-    background: linear-gradient(90deg, #334bf599 0%, #2ae9c99c 100%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(90deg, #7216c499 0%, #886de69c 100%);
     filter: blur(10px);
     border-radius: 50%;
     z-index: -1;

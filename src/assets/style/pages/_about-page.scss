@@ -38,7 +38,7 @@
       gap: 8px;
       & > * {
         width: 20px;
-        margin-right: 30px;
+        margin-right: 20px;
         font-size: 25px;
       }
     }
@@ -62,6 +62,7 @@
         font-size: 25px;
         line-height: 1;
         text-decoration: underline;
+        filter: drop-shadow(2px 4px 6px black);
         img {
           width: 55px;
           margin: 0;

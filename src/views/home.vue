@@ -1,5 +1,5 @@
 <template>
-  <section class="main-layout home">
+  <section class="main-layout home" ref="home">
     <a name="home"></a>
     <app-header :userHasScrolled="userHasScrolled" />
     <home-page />
@@ -11,7 +11,7 @@
     <contact />
     <a name="contact"></a>
     <a v-if="userHasScrolled" href="#home" class="up-button"> <i class="fas fa-arrow-up"></i></a>
-    <!-- <span class="mouse-over" :style="{ left: pos.x + 'px', top: pos.y + 'px' }"></span> -->
+    <span class="mouse-over full" :style="{ left: pos.x + 'px', top: pos.y + 'px' }"></span>
   </section>
 </template>
 
@@ -34,10 +34,15 @@
         if (!window.scrollY) this.userHasScrolled = false;
         else this.userHasScrolled = true;
       });
-      addEventListener('mousemove', (e) => {
+    },
+    mounted() {
+      this.$refs.home.addEventListener('mousemove', (e) => {
         this.pos.x = e.pageX;
         this.pos.y = e.pageY;
       });
+    },
+    destroyed() {
+      this.$refs.home.removeEventListener('mousemove');
     },
     components: { AppHeader, HomePage, ProjPage, AboutPage, Contact },
   };

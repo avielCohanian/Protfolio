@@ -182,7 +182,6 @@
       },
       projectsToDisplay() {
         let projsToDisplay = this.projects.slice();
-        console.log(this.filter);
         if (!this.filter) return projsToDisplay;
         else {
           projsToDisplay = projsToDisplay.filter((p) =>
