@@ -121,7 +121,7 @@
             code: 'https://github.com/avielCohanian/MineSweeper',
           },
           {
-            title: 'Mister-BITcoin(in progress)',
+            title: 'Mister-BITcoin(Free work)',
             description: ' A digital wallet for holding my bitcoins and sending (paying) them to my contact.',
             mainTechnology: 'React',
             stateManagement: 'Redux',
