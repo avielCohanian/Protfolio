@@ -2,15 +2,15 @@
   <section class="main-layout home" :class="{ 'dark-mode': isDarkMode }" ref="home">
     <a name="home"></a>
     <app-header :isDarkMode="isDarkMode" @changeMode="changeMode" :userHasScrolled="userHasScrolled" />
-    <home-page />
+    <home-page :isDarkMode="isDarkMode" />
 
     <a class="about" name="about"></a>
-    <about-page />
+    <about-page :isDarkMode="isDarkMode" />
 
     <a class="see-more" name="seeMore"></a>
-    <proj-page />
+    <proj-page :isDarkMode="isDarkMode" />
 
-    <contact />
+    <contact :isDarkMode="isDarkMode" />
     <a name="contact"></a>
 
     <a v-if="userHasScrolled" href="#home" class="up-button"> <i class="fas fa-arrow-up"></i></a>

@@ -9,7 +9,6 @@
   div {
     h1 {
       font-family: Merienda-Bold;
-
       font-size: clamp(1rem, 3vw + 1rem, 4rem);
       line-height: 1.3;
       position: relative;
@@ -89,6 +88,20 @@
           animation: typewriter 4s steps(24) 1s forwards;
         }
       }
+    }
+  }
+}
+
+.dark-mode-home {
+  div {
+    h1 {
+      &::before {
+        background: #262524;
+      }
+    }
+    h1,
+    h3 {
+      color: whitesmoke;
     }
   }
 }

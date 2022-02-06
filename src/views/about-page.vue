@@ -1,5 +1,5 @@
 <template>
-  <section class="about-page full">
+  <section class="about-page full" :class="{ 'dark-mode-about': isDarkMode }">
     <div class="container">
       <img src="../assets/img/Aviel.jpg" alt="" />
       <div>
@@ -40,6 +40,8 @@
 
 <script>
   export default {
+    name: 'about',
+    props: ['isDarkMode'],
     methods: {
       open() {
         window.open('https://github.com/avielCohanian');

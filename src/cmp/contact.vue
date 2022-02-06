@@ -1,5 +1,5 @@
 <template>
-  <div class="contact-me full">
+  <div class="contact-me full" :class="{ 'dark-mode-contact': isDarkMode }">
     <h2>CONTACT ME</h2>
     <p><b>Tel:</b> 050-3431443</p>
     <p class="email-link" @click="open('https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=avielcohanian@gmail.com')">
@@ -15,6 +15,8 @@
 
 <script>
   export default {
+    props: ['isDarkMode'],
+
     data() {
       return {};
     },

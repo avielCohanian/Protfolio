@@ -9,6 +9,7 @@
   background-color: #b1a28e38;
   box-shadow: none;
   transition: all 0.3s ease 0s;
+
   &.scroll {
     background-color: #ddcece;
     z-index: 2;
@@ -28,6 +29,9 @@
       font-family: Merienda-Regular;
     }
   }
+  .mode {
+    font-size: 30px;
+  }
 }
 
 @media screen and (max-width: $break-narrow) {
@@ -36,6 +40,26 @@
     height: 8%;
     .logo {
       display: none;
+    }
+    .mode {
+      position: fixed;
+      top: 75px;
+      right: 5px;
+    }
+  }
+}
+
+.dark-mode-header {
+  background-color: #673ab72b;
+  &.scroll {
+    background-color: #4a3869;
+  }
+  .icon {
+    color: whitesmoke;
+  }
+  .links {
+    & > * {
+      color: whitesmoke;
     }
   }
 }

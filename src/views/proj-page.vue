@@ -1,5 +1,5 @@
 <template>
-  <section class="proj-page">
+  <section class="proj-page" :class="{ 'dark-mode-proj': isDarkMode }">
     <ul class="clean-list" @keydown="checkSlide($event)">
       <div class="select-btn btn-filter">
         <a :class="isActive('vanilla')" @click="select('vanilla')"
@@ -67,6 +67,7 @@
   import ProjPreview from '../cmp/proj-preview.vue';
   export default {
     name: 'proj-page',
+    props: ['isDarkMode'],
     data() {
       return {
         projects: [

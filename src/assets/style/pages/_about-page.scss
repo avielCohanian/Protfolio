@@ -88,3 +88,14 @@
     }
   }
 }
+
+.dark-mode-about {
+  background-color: #dba1a194;
+  .container {
+    .resume {
+      a {
+        filter: drop-shadow(2px 4px 6px whitesmoke);
+      }
+    }
+  }
+}
