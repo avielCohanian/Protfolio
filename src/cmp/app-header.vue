@@ -7,6 +7,8 @@
       <a href="#about">ABOUT</a>
       <a href="#seeMore">PROJECTS</a>
       <a href="#contact">CONTACT</a>
+      <!-- <a v-if="!isDarkMode" @click="changeMode">🌙</a>
+      <a v-else @click="changeMode">🌞</a> -->
     </div>
   </header>
 </template>
@@ -14,7 +16,12 @@
 <script>
   export default {
     name: 'app-header',
-    props: ['userHasScrolled'],
+    props: ['userHasScrolled', 'isDarkMode'],
+    methods: {
+      changeMode() {
+        this.$emit('changeMode');
+      },
+    },
   };
 </script>
 

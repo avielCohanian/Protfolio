@@ -1,16 +1,20 @@
 <template>
-  <section class="main-layout home" ref="home">
+  <section class="main-layout home" :class="{ 'dark-mode': isDarkMode }" ref="home">
     <a name="home"></a>
-    <app-header :userHasScrolled="userHasScrolled" />
+    <app-header :isDarkMode="isDarkMode" @changeMode="changeMode" :userHasScrolled="userHasScrolled" />
     <home-page />
-    <a class="about" name="about"></a>
 
+    <a class="about" name="about"></a>
     <about-page />
+
     <a class="see-more" name="seeMore"></a>
     <proj-page />
+
     <contact />
     <a name="contact"></a>
+
     <a v-if="userHasScrolled" href="#home" class="up-button"> <i class="fas fa-arrow-up"></i></a>
+
     <span class="mouse-over full" :style="{ left: pos.x + 'px', top: pos.y + 'px' }"></span>
   </section>
 </template>
@@ -27,6 +31,7 @@
       return {
         userHasScrolled: false,
         pos: { x: 0, y: 0 },
+        isDarkMode: false,
       };
     },
     created() {
@@ -35,7 +40,13 @@
         else this.userHasScrolled = true;
       });
     },
+    methods: {
+      changeMode() {
+        this.isDarkMode = !this.isDarkMode;
+      },
+    },
     mounted() {
+      if (window.screen.width < 500) return;
       this.$refs.home.addEventListener('mousemove', (e) => {
         this.pos.x = e.pageX;
         this.pos.y = e.pageY;

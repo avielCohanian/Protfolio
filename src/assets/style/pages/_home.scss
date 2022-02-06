@@ -1,4 +1,6 @@
 .home {
+  background-image: url('../img/bcg.jpg');
+
   position: relative;
   z-index: 1;
   .mouse-over {
@@ -22,4 +24,11 @@
   .mouse-over {
     display: none;
   }
+  .home {
+    background-image: url('../img/bcgPhoneImg.jpg');
+  }
 }
+
+// .dark-mode {
+//   background-image: url('../img/darkMode.jpg');
+// }
