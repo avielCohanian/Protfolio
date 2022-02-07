@@ -26,21 +26,11 @@
   }
   .home {
     background-image: url('../img/bcgPhoneImg.jpg');
-    background-size: contain;
+    // background-size: contain;
   }
 }
 
 .dark-mode {
-  // background-image: url('../img/darkMode.jpg');
-  // background-size: contain;
   background-image: none;
   background-color: #151413ed;
-
-  // p,
-  // h1,
-  // h2,
-  // h3,
-  // a {
-  //   color: whitesmoke;
-  // }
 }
