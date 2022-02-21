@@ -88,6 +88,20 @@
             code: 'https://github.com/avielCohanian/Trelix',
           },
           {
+            title: 'Spotifo(In progress)',
+            description: 'Play songs and select preferences by artists / songs.',
+            mainTechnology: 'React',
+            stateManagement: 'Redux',
+            serverSide: 'Node.js',
+            database: 'Mongodb (on Atlas cloud)',
+            style: 'SCSS',
+            libraries: 'Axios (http requests), Socket.io (Web Sockets), React router, Font Awesome (Icons)',
+            otherTechnologies: 'Session Storage',
+            img: require('../assets/img/spoty.png'),
+            projLink: 'https://spotify15.herokuapp.com/#/',
+            code: '',
+          },
+          {
             title: 'Mister Keep',
             description:
               'Google-Keep-Based application, that allows users to make different kinds of notes, including text, lists, images, video and audio (via Youtube link), and also map locations. The notes are saved automatically in the Local Storage.',
