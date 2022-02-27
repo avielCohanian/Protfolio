@@ -99,7 +99,7 @@
             otherTechnologies: 'Session Storage',
             img: require('../assets/img/spoty.png'),
             projLink: 'https://spotify15.herokuapp.com/#/',
-            code: '',
+            code: 'https://github.com/avielCohanian/spotifo',
           },
           {
             title: 'Mister Keep',
