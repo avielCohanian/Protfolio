@@ -96,7 +96,7 @@
             database: 'Mongodb (on Atlas cloud)',
             style: 'SCSS',
             libraries:
-              'Axios (http requests), Socket.io (Web Sockets), React router, Font Awesome (Icons), react-google-login, react-youtube',
+              'Axios (http requests), Socket.io (Web Sockets), React router, Font Awesome (Icons), react-google-login, react-youtube, react-beautiful-dnd',
             otherTechnologies: 'Session Storage, i18n',
             img: require('../assets/img/spoty.png'),
             projLink: 'https://spotify15.herokuapp.com/#/',
