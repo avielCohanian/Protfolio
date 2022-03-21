@@ -88,7 +88,7 @@
             code: 'https://github.com/avielCohanian/Trelix',
           },
           {
-            title: 'Spotifo(In progress)',
+            title: 'Spotifo',
             description: 'Play songs and select preferences by artists / songs.',
             mainTechnology: 'React',
             stateManagement: 'Redux',
