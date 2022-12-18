@@ -99,7 +99,7 @@
               'Axios (http requests), Socket.io (Web Sockets), React router, Font Awesome (Icons), react-google-login, react-youtube, react-beautiful-dnd',
             otherTechnologies: 'Session Storage, i18n',
             img: require('../assets/img/spoty.png'),
-            projLink: 'https://spotify15.herokuapp.com/#/',
+            projLink: 'https://spotifo.onrender.com',
             code: 'https://github.com/avielCohanian/spotifo',
           },
           {
